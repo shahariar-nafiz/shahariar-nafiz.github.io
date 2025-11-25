@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhd. Shahariar Nafiz Irfan</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,15 +23,22 @@
   <section class="hero">
     <h1>Muhd. Shahariar Nafiz Irfan</h1>
     <div class="profile-images">
-      <img src="https://via.placeholder.com/140x180/333/fff?text=Photo+1" alt="Profile 1">
-      <img src="https://via.placeholder.com/140x180/333/fff?text=Photo+2" alt="Profile 2">
-      <img src="https://via.placeholder.com/140x180/333/fff?text=Photo+3" alt="Profile 3">
-      <img src="https://via.placeholder.com/140x180/333/fff?text=Photo+4" alt="Profile 4">
+      <img src="img/photo1.png" alt="Shahariar Nafiz">
+      <img src="img/photo2.png" alt="Shahariar Nafiz">
+      <img src="img/photo3.png" alt="Shahariar Nafiz">
+      <img src="img/photo4.png" alt="Shahariar Nafiz">
     </div>
-    <a href="#" class="resume-btn">Resume</a>
+    <a href="img/my_resume 2025.pdf" target="_blank" class="resume-btn">Resume</a>
     <div class="glasses-icon">
-      <img src="https://i.ibb.co/0jY7s8Q/glasses.png" alt="glasses">
+      <svg width="120" height="60" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="40" stroke="#444" stroke-width="8"/>
+        <circle cx="180" cy="60" r="40" stroke="#444" stroke-width="8"/>
+        <path d="M100 60 H140" stroke="#444" stroke-width="8"/>
+        <path d="M20 60 L0 50" stroke="#444" stroke-width="8"/>
+        <path d="M220 60 L240 50" stroke="#444" stroke-width="8"/>
+      </svg>
     </div>
+    <div class="metallic-bg"></div>
   </section>
 
   <!-- Projects Section -->
@@ -44,7 +51,7 @@
         <li>Then it uses AI to determine the market sentiment — bullish, bearish, or neutral — for a specific asset or overall market.</li>
       </ul>
     </div>
-    <div class="project-card">
+    <div class="project-card middle">
       <h3>TradeRL</h3>
       <ul>
         <li>Smart AI Trading Bot with Reinforcement Learning.</li>
@@ -60,44 +67,50 @@
         <li>Displays it as a color-coded heatmap (red = strong negative, green = strong positive)</li>
       </ul>
     </div>
-    <a href="#" class="resume-btn bottom">Resume</a>
+    <a href="img/my_resume 2025.pdf" target="_blank" class="resume-btn bottom">Resume</a>
+    <div class="metallic-bg"></div>
   </section>
 
   <!-- About Me -->
   <section class="about">
     <h2>ABOUT ME</h2>
-    <p>
-      Myself, Md. Shahariar Nafiz Irfan is a 19-year-old quantitative strategist and entrepreneur with a proven track record of generating alpha in emerging markets. Starting with self-taught coding during Dhaka's power outages, I developed a proprietary AI trading bot, which has maintained a verified, non-losing live MT5 account for three years. My experience includes successfully scaling a fashion startup's finances threefold and consistently achieving top ranks in global trading championships. My vision is to build Bangladesh's first AI-native hedge fund and private equity engine, setting the stage for his long-term goal of becoming a multi-billion dollar serial entrepreneur focused on high-impact technology firms.
-    </p>
-    <a href="#" class="resume-btn">Resume</a>
+    <div class="about-content">
+      <p>
+        Myself, Md. Shahariar Nafiz Irfan is a 19-year-old quantitative strategist and entrepreneur with a proven track record of generating alpha in emerging markets. Starting with self-taught coding during Dhaka's power outages, I developed a proprietary AI trading bot, which has maintained a verified, non-losing live MT5 account for three years. My experience includes successfully scaling a fashion startup's finances threefold and consistently achieving top ranks in global trading championships. My vision is to build Bangladesh's first AI-native hedge fund and private equity engine, setting the stage for his long-term goal of becoming a multi-billion dollar serial entrepreneur focused on high-impact technology firms.
+      </p>
+      <img src="img/silver-surfer.jpg" alt="Silver Surfer Style">
+    </div>
+    <a href="img/my_resume 2025.pdf" target="_blank" class="resume-btn">Resume</a>
+    <div class="metallic-bg"></div>
   </section>
 
   <!-- Contact -->
   <section class="contact">
     <div class="social-icons">
-      <a href="#"><img src="https://img.icons8.com/fluency/48/000000/apple-mail.png"/></a>
-      <a href="#"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a>
-      <a href="#"><img src="https://img.icons8.com/fluency/48/000000/whatsapp.png"/></a>
-      <a href="#"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/></a>
+      <a href="mailto:your-email@example.com"><img src="https://img.icons8.com/fluency/96/apple-mail.png"/></a>
+      <a href="#"><img src="https://img.icons8.com/fluency/96/facebook-new.png"/></a>
+      <a href="#"><img src="https://img.icons8.com/fluency/96/whatsapp.png"/></a>
+      <a href="#"><img src="https://img.icons8.com/fluency/96/instagram-new.png"/></a>
     </div>
-    <form class="contact-form">
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
       <h3>Contact Form</h3>
-      <input type="text" placeholder="Your name" required />
-      <input type="email" placeholder="Email address" required />
-      <textarea placeholder="Tell something..." required></textarea>
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Email address" required />
+      <textarea name="message" placeholder="Tell something..." required></textarea>
       <div class="rating">
         <span>Share your experience</span>
         <div class="emojis">
-          <button type="button">😢</button>
-          <button type="button">🙁</button>
-          <button type="button">😐</button>
-          <button type="button">🙂</button>
-          <button type="button">😊</button>
+          <button type="button">Sad</button>
+          <button type="button">Frowning</button>
+          <button type="button">Neutral</button>
+          <button type="button">Smiling</button>
+          <button type="button">Happy</button>
         </div>
       </div>
       <button type="submit" class="send-btn">Send</button>
       <p class="privacy">Your name won't be shared. Never submit passwords.</p>
     </form>
+    <div class="metallic-bg"></div>
   </section>
 
   <footer>
