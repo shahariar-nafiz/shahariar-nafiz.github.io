@@ -1,28 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav-link");
+  const items = document.querySelectorAll(".nav-item");
   const indicator = document.querySelector(".indicator");
   const pages = document.querySelectorAll(".page");
 
-  const positions = [50, 210, 410, 590]; // exact pixel positions
+  const positions = [65, 230, 430, 610]; // exact pixel positions
 
-  function activate(link) {
-    links.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-    const i = Array.from(links).indexOf(link);
-    gsap.to(indicator, { x: positions[i], duration: 0.7, ease: "power3.out" });
+  function activate(item) {
+    items.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+    const idx = Array.from(items).indexOf(item);
+    gsap.to(indicator, { x: positions[idx], duration: 0.7, ease: "power3.out" });
 
     pages.forEach(p => p.classList.remove("active"));
-    document.querySelector(link.getAttribute("href")).classList.add("active");
+    document.querySelector(item.getAttribute("href")).classList.add("active");
   }
 
-  links.forEach(link => {
-    link.addEventListener("click", e => {
+  items.forEach(item => {
+    item.addEventListener("click", e => {
       e.preventDefault();
-      activate(link);
-      history.pushState(null, null, link.getAttribute("href"));
+      activate(item);
     });
   });
 
-  // Init
-  activate(document.querySelector(".nav-link"));
+  // Start on Home
+  activate(items[0]);
 });
