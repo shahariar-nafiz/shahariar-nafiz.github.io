@@ -5,103 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhd. Shahariar Nafiz Irfan</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Nav -->
-  <nav class="nav">
-    <a href="#" class="active">Home</a>
-    <a href="#">Projects & Research</a>
-    <a href="#">About Me</a>
-    <a href="#">Contact</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#projects">Projects & Research</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Home Section -->
+  <section id="home" class="section home">
     <h1>Muhd. Shahariar Nafiz Irfan</h1>
     <div class="photos">
-      <img src="img/photo1.png" alt="">
-      <img src="img/photo2.png" alt="">
-      <img src="img/photo3.png" alt="">
-      <img src="img/photo4.png" alt="">
+      <img src="img/photo1.png" alt="Photo 1">
+      <img src="img/photo2.png" alt="Photo 2">
+      <img src="img/photo3.png" alt="Photo 3">
+      <img src="img/photo4.png" alt="Photo 4">
     </div>
-    <a href="img/resume.pdf" target="_blank" class="btn">Resume</a>
-    <div class="chrome-left"></div>
-    <div class="chrome-right"></div>
-    <div class="glasses"></div>
+    <a href="resume.pdf" target="_blank" class="resume-btn">Resume</a>
+    <div class="footer-name">Muhd. Shahariar Nafiz Irfan</div>
   </section>
 
-  <!-- Projects -->
-  <section class="projects">
-    <div class="card">
-      <h3>SentimentX</h3>
-      <ul>
-        <li>• AI-Powered Market Sentiment Analyzer.</li>
-        <li>• collects and analyzes real-time news articles, tweets, Reddit posts, and YouTube video descriptions related to crypto and forex. Then it uses AI to determine the market sentiment — bullish, bearish, or neutral — for a specific asset or overall market.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>TradeRL</h3>
-      <ul>
-        <li>• Smart AI Trading Bot with Reinforcement Learning.</li>
-        <li>• uses Reinforcement Learning to automatically learn how to buy/sell/hold crypto or forex assets based on market data — just like a human trader, but smarter and faster.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>CorrMatrix</h3>
-      <ul>
-        <li>• Interactive Multi-Asset Correlation Heatmap.</li>
-        <li>• Collects historical price data of multiple assets.</li>
-        <li>• Calculates the Pearson correlation coefficient between each pairs.</li>
-        <li>• Displays it as a color-coded heatmap (red = strong negative, green = strong positive)</li>
-      </ul>
-    </div>
-    <a href="img/resume.pdf" target="_blank" class="btn">Resume</a>
-    <div class="chrome-left"></div>
-    <div class="chrome-right"></div>
-    <div class="glasses"></div>
-  </section>
-
-  <!-- About -->
-  <section class="about">
-    <h2 class="bg">ABOUT ME</h2>
-    <div class="text">
-      <p>Myself, Md. Shahariar Nafiz Irfan is a 19-year-old quantitative strategist and entrepreneur with a proven track record of generating alpha in emerging markets. Starting with self-taught coding during Dhaka's power outages, I developed a proprietary AI trading bot, which has maintained a verified, non-losing live MT5 account for three years. My experience includes successfully scaling a fashion startup's finances threefold and consistently achieving top ranks in global trading championships. My vision is to build Bangladesh's first AI-native hedge fund and private equity engine, setting the stage for his long-term goal of becoming a multi-billion dollar serial entrepreneur focused on high-impact technology firms.</p>
-    </div>
-    <img src="img/silver-surfer.jpg" alt="" class="silver">
-    <a href="img/resume.pdf" target="_blank" class="btn">Resume</a>
-    <div class="chrome-bottom"></div>
-    <div class="glasses"></div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact">
-    <div class="social">
-      <img src="https://img.icons8.com/fluency/96/apple-mail.png">
-      <img src="https://img.icons8.com/fluency/96/facebook-new.png">
-      <img src="https://img.icons8.com/fluency/96/whatsapp.png">
-      <img src="https://img.icons8.com/fluency/96/instagram-new.png">
-    </div>
-    <form class="form">
-      <h3>Contact Form</h3>
-      <input type="text" placeholder="Your name" required>
-      <input type="email" placeholder="Email address" required>
-      <textarea placeholder="Tell something..." required></textarea>
-      <div class="rating">
-        <span>Share your experience</span>
-        <div class="emojis">
-          <button>Sad</button><button>Frowning</button><button>Neutral</button><button>Smiling</button><button>Happy</button>
-        </div>
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="project-cards">
+      <div class="card">
+        <h2>SentimentX</h2>
+        <ul>
+          <li>AI-Powered Market Sentiment Analyzer.</li>
+          <li>collects and analyzes real-time news articles, tweets, Reddit posts, and YouTube video descriptions related to crypto and forex. Then it uses AI to determine the market sentiment — bullish, bearish, or neutral — for a specific asset or overall market.</li>
+        </ul>
       </div>
+      <div class="card">
+        <h2>TradeRL</h2>
+        <ul>
+          <li>Smart AI Trading Bot with Reinforcement Learning.</li>
+          <li>uses Reinforcement Learning to automatically learn how to buy/sell/hold crypto or forex assets based on market data — just like a human trader, but smarter and faster.</li>
+        </ul>
       </div>
-      <button type="submit" class="send">Send</button>
-      <p>Your name won’t be shared. Never submit passwords.</p>
-    </form>
-    <div class="chrome-left"></div>
+      <div class="card">
+        <h2>CorrMatrix</h2>
+        <ul>
+          <li>Interactive Multi-Asset Correlation Heatmap.</li>
+          <li>Collects historical price data of multiple assets.</li>
+          <li>Calculates the Pearson correlation coefficient between each pairs.</li>
+          <li>Displays it as a color-coded heatmap (red = strong negative, green = strong positive)</li>
+        </ul>
+      </div>
+    </div>
+    <a href="resume.pdf" target="_blank" class="resume-btn">Resume</a>
+    <div class="footer-name">Muhd. Shahariar Nafiz Irfan</div>
   </section>
 
-  <footer>Muhd. Shahariar Nafiz Irfan</footer>
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="about-content">
+      <p>
+        Myself, Md. Shahariar Nafiz Irfan is a 19-year-old quantitative strategist and entrepreneur with a proven track record of generating alpha in emerging markets. Starting with self-taught coding during Dhaka’s power outages, I developed a proprietary AI trading bot, which has maintained a verified, non-losing live MT5 account for three years. My experience includes successfully scaling a fashion startup’s finances threefold and consistently achieving top ranks in global trading championships. My vision is to build Bangladesh's first AI-native hedge fund and private equity engine, setting the stage for his long-term goal of becoming a multi-billion dollar serial entrepreneur focused on high-impact technology firms.
+      </p>
+      <img src="img/silver-surfer.jpg" alt="Silver Surfer" class="about-img">
+    </div>
+    <h2 class="about-title">ABOUT ME</h2>
+    <a href="resume.pdf" target="_blank" class="resume-btn">Resume</a>
+    <div class="footer-name">Muhd. Shahariar Nafiz Irfan</div>
+  </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="contact-wrapper">
+      <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/fluency/48/apple-mail.png"/></a>
+        <a href="#"><img src="https://img.icons8.com/fluency/48/facebook-new.png"/></a>
+        <a href="#"><img src="https://img.icons8.com/fluency/48/whatsapp.png"/></a>
+        <a href="#"><img src="https://img.icons8.com/fluency/48/instagram-new.png"/></a>
+      </div>
+
+      <div class="contact-form">
+        <h2>Contact Form</h2>
+        <form>
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Email address" required />
+          <textarea placeholder="Tell something..." rows="5"></textarea>
+          
+          <div class="feedback">
+            <p>Share your experience</p>
+            <div class="emojis">
+              <span>Very Sad</span><span>Sad</span><span>Neutral</span><span>Happy</span><span>Very Happy</span>
+            </div>
+          </div>
+
+          <button type="submit" class="send-btn">Send</button>
+          <p class="privacy">Your name won’t be shared. Never submit passwords.</p>
+        </form>
+      </div>
+    </div>
+    <div class="footer-name">Muhd. Shahariar Nafiz Irfan</div>
+  </section>
+
+  <script>
+    // Smooth scroll + active nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      document.querySelectorAll('section').forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 150) current = sec.getAttribute('id');
+      });
+      document.querySelectorAll('.navbar a').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+    });
+  </script>
 </body>
 </html>
