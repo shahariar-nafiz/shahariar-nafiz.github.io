@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhd. Shahariar Nafiz Irfan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #050505;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-sm uppercase tracking-wide text-white font-medium">Home</a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#projects-research" class="text-sm uppercase tracking-wide text-gray-400 hover:text-white transition-colors">Projects & Research</a>
+                <span class="text-gray-600">|</span>
+                <a href="#about-me" class="text-sm uppercase tracking-wide text-gray-400 hover:text-white transition-colors">About Me</a>
+                <span class="text-gray-600">|</span>
+                <a href="#contact" class="text-sm uppercase tracking-wide text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <a href="./images/my-resume-2025.pdf" target="_blank" class="flex items-center space-x-2 px-4 py-2 border border-gray-600 rounded-lg text-sm uppercase tracking-wide text-white hover:border-white transition-colors">
+                <span>Resume</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-96 h-96 rounded-full bg-gradient-to-br from-gray-300 via-gray-400 to-gray-600 filter grayscale contrast-125 transform rotate-12"
+                 style="background-image: url('./images/photo1.png'); background-size: cover; background-position: center;">
+            </div>
+        </div>
+
+        <div class="absolute bottom-20 right-20 text-right">
+            <h1 class="text-2xl md:text-3xl font-light tracking-wider text-white">
+                Muhd. Shahariar Nafiz Irfan
+            </h1>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects-research" class="min-h-screen py-20 px-6 max-w-4xl mx-auto">
+        <div class="space-y-16">
+            <!-- SentimentX -->
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold text-white mb-2">SentimentX</h2>
+                <p class="text-lg mono text-gray-400 mb-4">• AI-Powered Market Sentiment Analyzer</p>
+                <p class="text-gray-400 max-w-2xl leading-relaxed">
+                    Collects and analyzes real-time news articles, tweets, Reddit posts, and YouTube video descriptions related to crypto and forex. Then it uses AI to determine the market sentiment — bullish, bearish, or neutral — for a specific asset or overall market.
+                </p>
+            </div>
+
+            <!-- TradeRL -->
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold text-white mb-2">TradeRL</h2>
+                <p class="text-lg mono text-gray-400 mb-4">• Smart AI Trading Bot with Reinforcement Learning</p>
+                <p class="text-gray-400 max-w-2xl leading-relaxed">
+                    Uses Reinforcement Learning to automatically learn how to buy/sell/hold crypto or forex assets based on market data — just like a human trader, but smarter and faster.
+                </p>
+            </div>
+
+            <!-- CorrMatrix -->
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold text-white mb-2">CorrMatrix</h2>
+                <p class="text-lg mono text-gray-400 mb-4">• Interactive Multi-Asset Correlation Heatmap</p>
+                <p class="text-gray-400 max-w-2xl leading-relaxed">
+                    Collects historical price data of multiple assets. Calculates the Pearson correlation coefficient between each pairs. Displays it as a color-coded heatmap (red = strong negative, green = strong positive).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-me" class="min-h-screen py-20 px-6 relative overflow-hidden">
+        <h1 class="absolute top-20 left-0 right-0 text-center text-8xl md:text-9xl font-black uppercase text-gray-900 tracking-tighter z-0 pointer-events-none">
+            ABOUT ME
+        </h1>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Images Column -->
+                <div class="relative h-96 lg:h-[500px]">
+                    <div class="absolute left-0 bottom-0 w-64 h-64 bg-gradient-to-br from-gray-300 to-gray-500 rounded-lg filter grayscale contrast-125"
+                         style="background-image: url('./images/photo2.png'); background-size: cover; background-position: center;">
+                    </div>
+                    
+                    <div class="absolute top-10 right-10 w-48 h-48 bg-gradient-to-tr from-gray-400 to-gray-600 rounded-full filter grayscale contrast-125 blur-sm opacity-60"
+                         style="background-image: url('./images/photo3.png'); background-size: cover; background-position: center;">
+                    </div>
+                    
+                    <div class="absolute bottom-20 right-0 w-32 h-16 border-2 border-gray-400 rounded-full filter grayscale"
+                         style="background-image: url('./images/photo4.png'); background-size: cover; background-position: center;">
+                    </div>
+                </div>
+
+                <!-- Bio Text -->
+                <div class="bg-black p-8 rounded-lg">
+                    <p class="text-white text-lg leading-relaxed">
+                        Myself, Md. Shahariar Nafiz Irfan is a 19-year-old quantitative strategist and entrepreneur with a proven track record of generating alpha in emerging markets. Starting with self-taught coding during Dhaka's power outages, I developed a proprietary AI trading bot, which has maintained a verified, non-losing live MT5 account for three years. My experience includes successfully scaling a fashion startup's finances threefold and consistently achieving top ranks in global trading championships. My vision is to build Bangladeshi's first AI-native hedge fund and private equity engine, setting the stage for his long-term goal of becoming a multi-billion dollar serial entrepreneur focused on high-impact technology firms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen py-20 px-6 max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-12 text-center">Contact Form</h2>
+
+        <form class="space-y-8">
+            <div>
+                <input type="text" placeholder="Your name" class="w-full bg-transparent border-b border-gray-600 py-3 px-2 text-white placeholder-gray-500 focus:border-white focus:outline-none transition-colors">
+            </div>
+
+            <div>
+                <input type="email" placeholder="Email address" class="w-full bg-transparent border-b border-gray-600 py-3 px-2 text-white placeholder-gray-500 focus:border-white focus:outline-none transition-colors">
+            </div>
+
+            <div>
+                <textarea placeholder="Tell something..." rows="6" class="w-full bg-transparent border-b border-gray-600 py-3 px-2 text-white placeholder-gray-500 focus:border-white focus:outline-none transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="flex items-center space-x-2 text-white uppercase tracking-wide hover:text-gray-300 transition-colors">
+                <span>Send</span>
+            </button>
+        </form>
+
+        <div class="mt-16 pt-8 border-t border-gray-800">
+            <p class="text-xs text-gray-600 mb-4">
+                Your name won't be shared. Never submit passwords.
+            </p>
+            <p class="text-right text-sm text-gray-400">
+                Muhd. Shahariar Nafiz Irfan
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Simple scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
