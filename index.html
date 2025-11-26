@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhd. Shahariar Nafiz Irfan</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        background: '#050505',
+                        primary: '#FFFFFF',
+                        secondary: '#A3A3A3',
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
@@ -19,23 +36,69 @@
         .mono {
             font-family: 'JetBrains Mono', monospace;
         }
-        .section-bg {
+        .chrome-filter {
+            filter: grayscale(100%) contrast(125%);
+        }
+        
+        /* Section backgrounds */
+        .home-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('public/images/bg-home.png');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: -1;
         }
-        .home-bg {
-            background-image: url('./images/bg-home.png');
+        .projects-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('public/images/bg-projects-&-research.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            z-index: -1;
         }
-        .projects-bg {
-            background-image: url('./images/bg-projects-&-research.png');
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('public/images/bg-about-me.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            z-index: -1;
         }
-        .about-bg {
-            background-image: url('./images/bg-about-me.png');
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('public/images/bg-contact.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            z-index: -1;
         }
-        .contact-bg {
-            background-image: url('./images/bg-contact.png');
-        }
+        
+        /* Fallback gradients */
+        .home-section { background: linear-gradient(45deg, #1a1a1a, #2d2d2d); position: relative; }
+        .projects-section { background: linear-gradient(45deg, #1a1a1a, #2d2d2d); position: relative; }
+        .about-section { background: linear-gradient(45deg, #1a1a1a, #2d2d2d); position: relative; }
+        .contact-section { background: linear-gradient(45deg, #1a1a1a, #2d2d2d); position: relative; }
     </style>
 </head>
 <body class="bg-[#050505]">
@@ -55,16 +118,21 @@
             </div>
 
             <!-- Right - Resume Button -->
-            <a href="./images/my-resume-2025.pdf" target="_blank" class="flex items-center space-x-2 px-4 py-2 border border-gray-600 rounded-lg text-sm font-sans uppercase tracking-wide text-white hover:border-white transition-colors">
+            <a href="public/images/my-resume-2025.pdf" target="_blank" class="flex items-center space-x-2 px-4 py-2 border border-gray-600 rounded-lg text-sm font-sans uppercase tracking-wide text-white hover:border-white transition-colors">
                 <span>Resume</span>
             </a>
         </div>
     </nav>
 
     <!-- Hero Section (Page 1) -->
-    <section id="home" class="min-h-screen section-bg home-bg flex items-center justify-center relative">
-        <div class="text-center">
-            <!-- Name at bottom right like PDF -->
+    <section id="home" class="min-h-screen home-section flex items-center justify-center relative">
+        <div class="text-center relative z-10">
+            <!-- Central Visual Element -->
+            <div class="w-64 h-64 mx-auto mb-8 rounded-full bg-gradient-to-br from-gray-400 to-gray-600 chrome-filter"
+                 style="background-image: url('public/images/photo1.png'); background-size: cover; background-position: center;">
+            </div>
+            
+            <!-- Name at bottom right -->
             <div class="absolute bottom-8 right-8">
                 <h1 class="text-xl font-sans font-light tracking-wider text-white">
                     Muhd. Shahariar Nafiz Irfan
@@ -74,8 +142,8 @@
     </section>
 
     <!-- Projects & Research Section (Page 2) -->
-    <section id="projects-research" class="min-h-screen section-bg projects-bg py-20 px-6">
-        <div class="max-w-4xl mx-auto">
+    <section id="projects-research" class="min-h-screen projects-section py-20 px-6">
+        <div class="max-w-4xl mx-auto relative z-10">
             <!-- SentimentX -->
             <div class="mb-16">
                 <h2 class="text-4xl font-sans font-semibold text-white mb-2">SentimentX</h2>
@@ -111,7 +179,7 @@
     </section>
 
     <!-- About Me Section (Page 3) -->
-    <section id="about-me" class="min-h-screen section-bg about-bg py-20 px-6 relative">
+    <section id="about-me" class="min-h-screen about-section py-20 px-6 relative">
         <!-- Large Background Title -->
         <h1 class="absolute top-20 left-0 right-0 text-center text-8xl md:text-9xl font-black uppercase text-gray-900 tracking-tighter z-0 pointer-events-none">
             ABOUT ME
@@ -122,23 +190,23 @@
                 <!-- Left Column - Images -->
                 <div class="relative h-96 lg:h-[500px]">
                     <!-- Silver Surfer Image -->
-                    <div class="absolute left-0 bottom-0 w-64 h-64 chrome-filter"
-                         style="background-image: url('./images/photo1.png'); background-size: cover; background-position: center; border-radius: 8px;">
+                    <div class="absolute left-0 bottom-0 w-64 h-64 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg chrome-filter"
+                         style="background-image: url('public/images/photo1.png'); background-size: cover; background-position: center;">
                     </div>
                     
                     <!-- Abstract Chrome Blob -->
-                    <div class="absolute top-10 right-10 w-48 h-48 chrome-filter blur-sm opacity-60"
-                         style="background-image: url('./images/photo2.png'); background-size: cover; background-position: center; border-radius: 50%;">
+                    <div class="absolute top-10 right-10 w-48 h-48 bg-gradient-to-tr from-gray-400 to-gray-600 rounded-full chrome-filter blur-sm opacity-60"
+                         style="background-image: url('public/images/photo2.png'); background-size: cover; background-position: center;">
                     </div>
                     
                     <!-- Wireframe Eyes -->
-                    <div class="absolute bottom-20 right-0 w-32 h-16 chrome-filter"
-                         style="background-image: url('./images/photo3.png'); background-size: cover; background-position: center; border-radius: 50%;">
+                    <div class="absolute bottom-20 right-0 w-32 h-16 border-2 border-gray-400 rounded-full chrome-filter"
+                         style="background-image: url('public/images/photo3.png'); background-size: cover; background-position: center;">
                     </div>
                 </div>
 
                 <!-- Right Column - Bio Text -->
-                <div class="bg-black p-8 rounded-lg">
+                <div class="bg-black/80 p-8 rounded-lg backdrop-blur-sm">
                     <p class="text-white text-lg leading-relaxed">
                         Myself, Md. Shahariar Nafiz Irfan is a 19-year-old quantitative strategist and entrepreneur with a proven track record of generating alpha in emerging markets. Starting with self-taught coding during Dhaka's power outages, I developed a proprietary AI trading bot, which has maintained a verified, non-losing live MT5 account for three years. My experience includes successfully scaling a fashion startup's finances threefold and consistently achieving top ranks in global trading championships. My vision is to build Bangladeshi's first AI-native hedge fund and private equity engine, setting the stage for his long-term goal of becoming a multi-billion dollar serial entrepreneur focused on high-impact technology firms.
                     </p>
@@ -153,8 +221,8 @@
     </section>
 
     <!-- Contact Section (Page 4) -->
-    <section id="contact" class="min-h-screen section-bg contact-bg py-20 px-6">
-        <div class="max-w-2xl mx-auto">
+    <section id="contact" class="min-h-screen contact-section py-20 px-6">
+        <div class="max-w-2xl mx-auto relative z-10">
             <h2 class="text-3xl md:text-4xl font-sans font-semibold text-white mb-12 text-center">Contact Form</h2>
 
             <form class="space-y-8">
@@ -176,7 +244,7 @@
                 <!-- Share your experience Send -->
                 <div class="flex items-center justify-between">
                     <span class="text-gray-400 text-sm">Share your experience</span>
-                    <button type="submit" class="text-white font-sans hover:text-gray-300 transition-colors">
+                    <button type="submit" class="text-white font-sans hover:text-gray-300 transition-colors px-4 py-2 border border-gray-600 rounded hover:border-white">
                         Send
                     </button>
                 </div>
@@ -211,11 +279,24 @@
             });
         });
 
-        // Add chrome filter class
+        // Debug image loading
         document.addEventListener('DOMContentLoaded', function() {
-            const chromeElements = document.querySelectorAll('.chrome-filter');
-            chromeElements.forEach(el => {
-                el.style.filter = 'grayscale(100%) contrast(125%)';
+            console.log('Page loaded - checking images...');
+            
+            const imageElements = document.querySelectorAll('[style*="background-image"]');
+            imageElements.forEach((el, index) => {
+                const bgImage = el.style.backgroundImage;
+                console.log(`Image ${index + 1}:`, bgImage);
+                
+                // Test if image loads
+                const img = new Image();
+                img.src = bgImage.replace('url(', '').replace(')', '').replace(/'/g, '').replace(/"/g, '');
+                img.onload = function() {
+                    console.log(`✓ Image ${index + 1} loaded successfully:`, img.src);
+                };
+                img.onerror = function() {
+                    console.log(`✗ Image ${index + 1} failed to load:`, img.src);
+                };
             });
         });
     </script>
